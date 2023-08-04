@@ -1,0 +1,11 @@
+import lombok.Data;
+
+@Data
+public class RegisterEntity {
+	
+	private Integer patientId;
+	private String patientName;
+	private String patientEmail;
+	private String pwd;
+
+}
