@@ -21,10 +21,17 @@ public class PatientController {
     @Autowired
 	RSInf r;
 
+<<<<<<< HEAD
     // @GetMapping("/greet")
     // public String greet(){
     //     return "Good morning";
     // }
+=======
+    @GetMapping("/greet")
+    public String greet(){
+        return "Good morning";
+    }
+>>>>>>> aa0b1a1ceea161499d6b4a5fa0e5d187a0f4cd7a
 
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody Patient patient) 

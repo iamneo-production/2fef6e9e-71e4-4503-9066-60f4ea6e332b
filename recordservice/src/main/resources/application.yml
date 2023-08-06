@@ -41,4 +41,9 @@ eureka:
   instance:
 
     prefer-ip-address: true
+<<<<<<< HEAD
 #/home/coder/project/workspace/recordservice/target/recordservice-0.0.1-SNAPSHOT.jar
+=======
+
+#/home/coder/project/workspace/registrationservice/target/registrationservice-0.0.1-SNAPSHOT.jar
+>>>>>>> aa0b1a1ceea161499d6b4a5fa0e5d187a0f4cd7a

@@ -1,0 +1,44 @@
+Participating Services: 
+
+Registration Service 
+Description: This service receives the patient's registration details and initiates the registration process. 
+RESTful Endpoint: POST /registration 
+
+Validation Service 
+Description: Validates the patient information received from the Registration Service. 
+RESTful Endpoint: POST /validation 
+
+Patient Record Service 
+Description: Creates and stores the patient record after successful registration. 
+RESTful Endpoint: POST /patient-record 
+
+Notification Service 
+Description: Sends notifications to relevant stakeholders after the patient registration process. 
+RESTful Endpoint: POST /notifications 
+
+Search Service 
+Description: Allows authorized users to search for registered patients based on certain criteria. 
+RESTful Endpoint: GET /search 
+
+Flow of Events: 
+The Patient submits their registration details through the Registration Service (POST /registration). 
+The Registration Service forwards the patient information to the Validation Service (POST /validation). 
+The Validation Service checks the provided data for accuracy and sends the result (valid or invalid) back to the Registration Service. 
+If the data is valid, the Registration Service forwards it to the Patient Record Service (POST /patient-record). 
+The Patient Record Service creates the patient's record and stores it. 
+After successful registration, the Registration Service triggers the Notification Service (POST /notifications) to inform relevant stakeholders. 
+
+Alternate Flow: 
+If the Validation Service finds the provided data invalid, the Registration Service will prompt the Patient to correct the information and resubmit.
+
+Post-conditions: 
+Patient registration data is stored in the Patient Record Service. 
+Notifications are sent to relevant stakeholders. 
+
+Output Conditions: 
+Upon successful registration, the patient will receive a confirmation message with their registration details and unique patient ID. 
+The relevant stakeholders will receive notifications containing the patient's registration information. 
+
+Service Interaction: 
+The Registration Service will call the Validation Service to validate patient information before creating the patient record. 
+The Registration Service will also call the Notification Service to notify stakeholders after successful registration. 
