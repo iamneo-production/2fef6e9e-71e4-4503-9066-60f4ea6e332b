@@ -1,17 +1,15 @@
-package com.healthcare.registration.registrationservice.controller;
-import jakarta.persistence.Id;
+package com.validation.patientvalidation.controller;
+
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class Patient {
+public class PatientPojo {
     private long id;
     private String name;
     private String mail;
